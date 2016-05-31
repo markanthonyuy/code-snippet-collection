@@ -2,4 +2,4 @@
 Collection of all code snippets I created and/or found while researching. Enjoy!
 
 
-</> <3 (me)[http://markanthonyuy.com]
+</> <3 (http://markanthonyuy.com)[me]
