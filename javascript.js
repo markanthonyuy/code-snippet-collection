@@ -346,3 +346,10 @@ var select = document.getElementById('selectbox');
 document.getElementById('image').addEventListener('click', function(e) {
   openSelectBox(select);
 }, false);
+
+// Uppercase the first letter of string
+// Source: http://stackoverflow.com/a/1026087/2533723
+//===============================================================================================================
+function uppercaseFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
