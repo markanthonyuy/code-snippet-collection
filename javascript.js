@@ -1,4 +1,5 @@
 // Get the url query parameters
+// Source: http://stackoverflow.com/a/20097994/2533723
 //===============================================================================================================
 function getUrlVars() {
   var vars = {};
