@@ -369,3 +369,39 @@ function commaSeparateNumber(val){
 // Source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
 //===============================================================================================================
 Number(11231123.12).toLocaleString('en')
+
+// Detect firefox browsers
+// Source: http://stackoverflow.com/a/7000222/2533723
+//===============================================================================================================
+function isFirefox() {
+  return navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+}
+
+// Detect IE browsers
+// Source: https://codepen.io/gapcode/pen/vEJNZN
+//===============================================================================================================
+function isIE() {
+  var ua = window.navigator.userAgent;
+
+  var msie = ua.indexOf('MSIE ');
+  if (msie > 0) {
+    // IE 10 or older => return version number
+    return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+  }
+
+  var trident = ua.indexOf('Trident/');
+  if (trident > 0) {
+    // IE 11 => return version number
+    var rv = ua.indexOf('rv:');
+    return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+  }
+
+  var edge = ua.indexOf('Edge/');
+  if (edge > 0) {
+    // Edge (IE 12+) => return version number
+    return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+  }
+
+  // other browser
+  return false;
+}
