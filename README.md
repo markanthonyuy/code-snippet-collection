@@ -11,5 +11,6 @@ Collection of all code snippets I created and/or found while researching. Enjoy!
 7. [Remove browser cookie](https://github.com/markanthonyuy/code-snippet-collection/blob/master/javascript.js#L323)
 8. [Open selectbox dropdown menu](https://github.com/markanthonyuy/code-snippet-collection/blob/master/javascript.js#L330)
 9. [Uppercase the first letter of string](https://github.com/markanthonyuy/code-snippet-collection/blob/master/javascript.js#L350)
+10. [Add comma (,) to number/amount correctly](https://github.com/markanthonyuy/code-snippet-collection/blob/master/javascript.js#L357)
 
 </> by [Mac](http://markanthonyuy.com)
