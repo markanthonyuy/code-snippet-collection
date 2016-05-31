@@ -295,6 +295,7 @@ document.addEventListener('touchend', function(e) {
 }, false);
 
 // Read browser cookie
+// Source: http://www.quirksmode.org/js/cookies.html
 //===============================================================================================================
 function readCookie(name) {
   var nameEQ = name + "=";
@@ -308,6 +309,7 @@ function readCookie(name) {
 }
 
 // Create browser cookie
+// Source: http://www.quirksmode.org/js/cookies.html
 //===============================================================================================================
 function createCookie(name, value, days) {
   if (days) {
@@ -319,6 +321,7 @@ function createCookie(name, value, days) {
 }
 
 // Remove browser cookie
+// Source: http://www.quirksmode.org/js/cookies.html
 //===============================================================================================================
 function eraseCookie(name) {
   createCookie(name, '', -1);
