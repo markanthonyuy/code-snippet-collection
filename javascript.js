@@ -9,7 +9,7 @@ function getUrlVars() {
   return vars;
 }
 
-// Get the lenght of an object 
+// Get the length of an object 
 //===============================================================================================================
 Object.size = function(obj) {
   var size = 0, key;
