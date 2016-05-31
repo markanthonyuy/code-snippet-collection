@@ -1,2 +1,5 @@
 # code-snippet-collection
-Collection of all code snippets I created and/or found while researching
+Collection of all code snippets I created and/or found while researching. Enjoy!
+
+
+</> <3 (me)[http://markanthonyuy.com]
