@@ -353,3 +353,19 @@ document.getElementById('image').addEventListener('click', function(e) {
 function uppercaseFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
+
+// Add comma (,) to number/amount correctly
+// Source: http://stackoverflow.com/a/12947816/2533723
+//===============================================================================================================
+function commaSeparateNumber(val){
+  while(/(\d+)(\d{3})/.test(val.toString())) {
+    val = val.toString().replace(/(\d+)(\d{3})/, '$1'+','+'$2');
+  }
+  return val;
+}
+
+// Alternative use for adding comma (,) to number/amount correctly. toLocaleString() 
+// (Note of the limited support of this function)
+// Source: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString
+//===============================================================================================================
+Number(11231123.12).toLocaleString('en')
