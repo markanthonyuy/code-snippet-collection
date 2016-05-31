@@ -1,4 +1,5 @@
 // Get the url query parameters
+//===============================================================================================================
 function getUrlVars() {
   var vars = {};
   window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m, key, value) {
@@ -8,6 +9,7 @@ function getUrlVars() {
 }
 
 // Get the lenght of an object 
+//===============================================================================================================
 Object.size = function(obj) {
   var size = 0, key;
   for(key in obj) {
@@ -17,7 +19,8 @@ Object.size = function(obj) {
 };
 
 // Encrypt string to md5
-var MD5 = function (string) {
+//===============================================================================================================
+var MD5 = function string) {
 
   function RotateLeft(lValue, iShiftBits) {
     return (lValue<<iShiftBits) | (lValue>>>(32-iShiftBits));
