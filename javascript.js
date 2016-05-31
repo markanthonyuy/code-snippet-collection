@@ -220,3 +220,105 @@ var MD5 = function string) {
 
   return temp.toLowerCase();
 };
+
+// Touch Swipe
+//===============================================================================================================
+var swipeModule = (function() {
+
+  var xDownStart = null,
+      yDownStart = null,
+      xDownEnd = null,
+      yDownEnd = null;
+
+  function touchStart(e) {
+    xDownStart = e.touches[0].clientX;
+    yDownStart = e.touches[0].clientY;
+  };
+
+  function touchEnd(e, leftCb, rightCb) {
+    xDownEnd = e.changedTouches[0].clientX;
+    yDownEnd = e.changedTouches[0].clientY;
+
+    if(e.target.type === 'text' || !xDownStart || !yDownStart) {
+      return;
+    }
+
+    var distance = 100,
+        xUp = e.changedTouches[0].clientX,
+        yUp = e.changedTouches[0].clientY,
+        xDiff = xDownStart - xUp,
+        yDiff = yDownStart - yUp;
+
+    if(Math.abs(xDiff) > Math.abs(yDiff)) { //most significant
+      if(xDiff > 0 ) {
+        if((Math.abs(xDownStart) - Math.abs(xDownEnd)) >= distance) {
+          // left swipe
+          leftCb();
+        }
+      } else {
+        if((Math.abs(xDownEnd) - Math.abs(xDownStart)) >= distance) {
+          // right swipe 
+          rightCb();
+        }
+      }
+    } else {
+      if(yDiff > 0) {
+        // up swipe  
+      } else { 
+        // down swipe 
+      }         
+    }
+    // reset values 
+    xDownStart = null;
+    yDownStart = null;
+    xDownEnd = null;
+    yDownEnd = null;
+  };
+
+  return {
+    touchStart: touchStart,
+    touchEnd: touchEnd
+  }
+
+}());
+
+// Example code to use swipe module
+//===============================================================================================================
+document.addEventListener('touchstart', swipeModule.touchStart, false);
+document.addEventListener('touchend', function(e) {
+  swipeModule.touchEnd(e, function() { 
+    // Swipe Right callback
+  }, function() {
+    // Swipe Left callback
+  });
+}, false);
+
+// Read browser cookie
+//===============================================================================================================
+function readCookie(name) {
+  var nameEQ = name + "=";
+  var ca = document.cookie.split(';');
+  for(var i=0;i < ca.length;i++) {
+    var c = ca[i];
+    while (c.charAt(0)==' ') c = c.substring(1,c.length);
+    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+  }
+  return null;
+}
+
+// Create browser cookie
+//===============================================================================================================
+function createCookie(name, value, days) {
+  if (days) {
+    var date = new Date();
+    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    var expires = "; expires=" + date.toGMTString();
+  } else var expires = "";
+  document.cookie = name + " = " + value + expires + "; path=/";
+}
+
+// Remove browser cookie
+//===============================================================================================================
+function eraseCookie(name) {
+  createCookie(name, '', -1);
+}
