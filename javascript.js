@@ -322,3 +322,23 @@ function createCookie(name, value, days) {
 function eraseCookie(name) {
   createCookie(name, '', -1);
 }
+
+// Open selectbox dropdown menu (NOTE: Works on Chrome and Safari only)
+// Source: http://stackoverflow.com/a/25162143/2533723
+//===============================================================================================================
+function openSelectBox(elem) {
+  if(document.createEvent) {
+    var e = document.createEvent("MouseEvents");
+    e.initMouseEvent("mousedown", true, true, window, 0, 0, 0, 0, 0, false, false, false, false, 0, null);
+    elem[0].dispatchEvent(e);
+  } else if (element.fireEvent) {
+    elem[0].fireEvent("onmousedown");
+  }
+}
+
+// Example code to use openSelectBox
+//===============================================================================================================
+var select = document.getElementById('selectbox');
+document.getElementById('image').addEventListener('click', function(e) {
+  openSelectBox(select);
+}, false);
