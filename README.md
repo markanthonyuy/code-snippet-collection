@@ -15,4 +15,6 @@ Collection of all code snippets I created and/or found while researching. Enjoy!
 11. [Detect firefox browsers](https://github.com/markanthonyuy/code-snippet-collection/blob/master/javascript.js#L373)
 12. [Detect IE browsers](https://github.com/markanthonyuy/code-snippet-collection/blob/master/javascript.js#L380)
 
+## Bugs Table of Contents
+1. [Firefox won't allow you to hide option element by adding class] (https://github.com/markanthonyuy/code-snippet-collection/blob/master/bugs.mds#L1)
 </> by [Mark Anthony Uy](http://markanthonyuy.com)
