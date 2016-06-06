@@ -405,3 +405,8 @@ function isIE() {
   // other browser
   return false;
 }
+
+// Get the last element of the array
+//===============================================================================================================
+var array = [1, 2, 3, 4, 5, 6];
+var lastElement = array.slice(-1); // lastElement = 6
