@@ -15,7 +15,7 @@ Collection of all code snippets I created and/or found while researching. Enjoy!
 11. [Detect firefox browsers](https://github.com/markanthonyuy/code-snippet-collection/blob/master/javascript.js#L373)
 12. [Detect IE browsers](https://github.com/markanthonyuy/code-snippet-collection/blob/master/javascript.js#L380)
 13. [Get the last element of the array](https://github.com/markanthonyuy/code-snippet-collection/blob/master/javascript.js#L409)
-14. [Remove the last character of the string](https://github.com/markanthonyuy/code-snippet-collection/blob/master/javascript.js#L411)
+14. [Remove the last character of the string](https://github.com/markanthonyuy/code-snippet-collection/blob/master/javascript.js#L414)
 
 ## Bash Table of Contents
 1. [Create a folder and go to it](https://github.com/markanthonyuy/code-snippet-collection/blob/master/bash.sh#L1)
