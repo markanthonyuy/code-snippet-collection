@@ -328,7 +328,7 @@ function eraseCookie(name) {
 }
 
 // Open selectbox dropdown menu (NOTE: Works on Chrome and Safari only)
-// Source: http://stackoverflow.com/a/25162143/2533723
+// Source: http://stackoverflow.com/a/24628881/2533723
 //===============================================================================================================
 function openSelectBox(elem) {
   if(document.createEvent) {
